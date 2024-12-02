@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS labs.weather (
 - Screenshot of records in the database.
 
 **Example Screenshot (Data Record):**
-![Data Record Screenshot](Images\image.png)
+![Data Record Screenshot](Images/image.png)
 
 ### 4. Airflow Logs
 Provide screenshots of DAG performance and logs.
@@ -76,6 +76,6 @@ A visual representation of the architecture implemented in this project.
 - **Database**: PostgreSQL for storing transformed weather data.
 
 **Example Diagram:**
-![Architecture Diagram](path/to/architecture_diagram.png)
+![DAG Overview](<Images/image copy.png>)
 
 
