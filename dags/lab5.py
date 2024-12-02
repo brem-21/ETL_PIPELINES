@@ -5,6 +5,8 @@ from airflow.sensors.http_sensor import HttpSensor
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
 from airflow.providers.postgres.hooks.postgres import PostgresHook
+
+
 API_CONN_ID = 'weather_api' # Connection ID for OpenWeather API
 POSTGRES_CONN_ID = 'postgres_local' # Connection ID for PostgreSQL
 default_args = {
@@ -17,6 +19,8 @@ default_args = {
 }  # Default arguments for the DAG so that we don't have to repeat them
 weather_connection = BaseHook.get_connection(API_CONN_ID) # Get the connection to OpenWeather API
 api_key = weather_connection.extra_dejson.get('api_key') # Get the API key from the connection above
+
+
 with DAG(
     'weather_pipeline',
     default_args=default_args,
@@ -49,6 +53,8 @@ with DAG(
         python_callable=fetch_weather,
     )
     # Transform weather data
+
+
     def transform_weather(ti):
         weather = ti.xcom_pull(task_ids='fetch_weather') # Get the weather data from the previous task using XCom
         # Convert temperature from Kelvin to Fahrenheit
@@ -72,6 +78,8 @@ with DAG(
         python_callable=transform_weather,
     )
     # Save weather data to Postgres
+
+    
     def load_weather_data(ti):
         """Load transformed data into PostgreSQL."""
         transformed_data = ti.xcom_pull(task_ids='transform_weather')
