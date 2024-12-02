@@ -1,0 +1,47 @@
+# Byte-compiled Python files
+*.py[cod]
+__pycache__/
+*.so
+
+# Airflow specific files
+airflow.db
+airflow.cfg
+unittests.cfg
+logs/
+dags/__pycache__/
+plugins/__pycache__/
+*.pid
+
+# Environment files
+.env
+.env.*.local
+*.env
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Virtual environment
+venv/
+.env/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# IDE or editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*.log
+*.bak
+*.tmp
+*.lock
+
+# Dependency files
+pip-wheel-metadata/
+*.egg-info/
+dist/
+build/
