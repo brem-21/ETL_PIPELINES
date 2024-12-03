@@ -8,7 +8,7 @@ This project demonstrates an ETL pipeline built using **Apache Airflow** to extr
 4. **Data Loading**: Inserts transformed data into a PostgreSQL database with an appropriate schema.
 
 
-### 1. Airflow DAG
+### Airflow DAG
 The Airflow DAG implements the following tasks:
 - **API Readiness Check**: Uses an `HttpSensor` to check the availability of the OpenWeather API.
 - **Extract Weather Data**: Uses a PythonOperator to fetch weather data via API.
@@ -18,7 +18,7 @@ The Airflow DAG implements the following tasks:
 #### Code:
 Find the Airflow DAG code [here](dags/lab5.py).
 
-### 2. Database Schema
+###  Database Schema
 The PostgreSQL schema is defined as follows:
 - **Schema**: `labs`
 - **Table**: `weather`
@@ -42,13 +42,13 @@ CREATE TABLE IF NOT EXISTS labs.weather (
 );
 ```
 
-### 3. Database Image
+### Database Image
 - Screenshot of records in the database.
 
 **Example Screenshot (Data Record):**
 ![Data Record Screenshot](Images/image.png)
 
-### 4. Airflow Logs
+### Airflow Logs
 Provide screenshots of DAG performance and logs.
 
 **Example Screenshot (DAG Overview):**
@@ -67,7 +67,7 @@ Provide screenshots of DAG performance and logs.
 
 - Logs for loading the data
 ![Loading data](<Images/image copy 5.png>)
-### 5. Architecture Diagram
+### Architecture Diagram
 A visual representation of the architecture implemented in this project.
 
 **Diagram Description:**
@@ -76,6 +76,6 @@ A visual representation of the architecture implemented in this project.
 - **Database**: PostgreSQL for storing transformed weather data.
 
 **Example Diagram:**
-![DAG Overview](<Images/image copy.png>)
+![DAG Overview](<Images/archit.png>)
 
 
