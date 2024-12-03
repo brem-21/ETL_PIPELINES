@@ -46,6 +46,7 @@ CREATE TABLE IF NOT EXISTS labs.weather (
 - Screenshot of records in the database.
 
 **Data Record:**
+
 ![Data Record Screenshot](Images/image.png)
 
 ### Airflow Logs
