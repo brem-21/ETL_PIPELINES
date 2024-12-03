@@ -29,7 +29,7 @@ The PostgreSQL schema is defined as follows:
   - `timestamp`: `TIMESTAMP`
   - `city`: `VARCHAR(255)`
 
-#### Schema Creation Snippet:
+#### Query to Create the schema:
 ```sql
 CREATE SCHEMA IF NOT EXISTS labs;
 
@@ -45,17 +45,17 @@ CREATE TABLE IF NOT EXISTS labs.weather (
 ### Database Image
 - Screenshot of records in the database.
 
-**Example Screenshot (Data Record):**
+**Data Record:**
 ![Data Record Screenshot](Images/image.png)
 
 ### Airflow Logs
 Provide screenshots of DAG performance and logs.
 
-**Example Screenshot (DAG Overview):**
+**DAG Overview:**
 ![DAG Overview](<Images/image copy.png>)
 
 
-**Example Screenshot (Logs):**
+**Logs**
 - Logs for checking API readiness.
 ![checking API](<Images/image copy 2.png>)
 
