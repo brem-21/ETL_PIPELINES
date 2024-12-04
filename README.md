@@ -108,4 +108,4 @@ A visual representation of the architecture implemented in this project.
 - ![front_view](<powerapps/frontview.png>)
 
 
-- ![detailed_page](<powerapps/dteailed_page.png>)
+- ![detailed_page](<powerapps/detail.png>)
