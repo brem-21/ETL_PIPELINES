@@ -98,10 +98,23 @@ A visual representation of the architecture implemented in this project.
   - Remove unnecessary columns.
   - Filter out rows where the drop-off coordinate is 0.
   - Parse coordinates as text to ensure compatibility with Dataverse
+  - Storage in Dataverse
 
   ![transformation](<powerapps/image copy 2.png>)
 
   ![transformation](<powerapps/image copy 2.png>)
+
+**Data Profiling** 
+- ![alt text](<powerapps/image copy 4.png>)
+
+- ![alt text](<powerapps/image copy 5.png>)
+
+
+- ![alt text](<powerapps/image copy 6.png>)
+
+
+# DATA FLOW
+- ![dataflow](powerapps/dataflow.png)
 
 
 #### Images of the Power Apps.
