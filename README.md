@@ -115,6 +115,7 @@ A visual representation of the architecture implemented in this project.
 
 # DATA FLOW
 - ![dataflow](powerapps/dataflow.png)
+
 - `when a new email Arrives(V3)` is the trigger for the flow if any mail with the specified subject `YellowData`.
 - `Apply to each` is the action that downloads the attachment from the email and saves it to the OneDrive.
 - `Refresh the DataFlow` is the action that loads the data from the OneDrive into the Power Query, and when the `
