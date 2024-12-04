@@ -1,0 +1,271 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_onedriveforbusiness": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "del_sharedonedriveforbusiness_6f8e4"
+        },
+        "api": {
+          "name": "shared_onedriveforbusiness"
+        }
+      },
+      "shared_dataflows": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "new_shareddataflows_9dba8"
+        },
+        "api": {
+          "name": "shared_dataflows"
+        }
+      },
+      "shared_office365": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "del_sharedoffice365_2c2c8"
+        },
+        "api": {
+          "name": "shared_office365"
+        }
+      },
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedcommondataserviceforapps_b78b9"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "When_a_new_email_arrives_(V3)": {
+          "splitOn": "@triggerOutputs()?['body/value']",
+          "metadata": {
+            "operationMetadataId": "bd7e0df8-26b7-4878-8e29-854698a6411b"
+          },
+          "type": "OpenApiConnectionNotification",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_office365",
+              "operationId": "OnNewEmailV3",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+            },
+            "parameters": {
+              "folderPath": "Inbox",
+              "includeAttachments": true,
+              "subjectFilter": "YellowData",
+              "importance": "Any",
+              "fetchOnlyWithAttachment": false
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Apply_to_each": {
+          "foreach": "@triggerOutputs()?['body/attachments']",
+          "actions": {
+            "Create_file": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "b6eb6fc2-1594-464c-b1b1-9b59de10819a"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_onedriveforbusiness",
+                  "operationId": "CreateFile",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_onedriveforbusiness"
+                },
+                "parameters": {
+                  "folderPath": "/DE PowerAutomate",
+                  "name": "@items('Apply_to_each')?['name']",
+                  "body": "@items('Apply_to_each')?['contentBytes']"
+                },
+                "authentication": "@parameters('$authentication')"
+              },
+              "runtimeConfiguration": {
+                "contentTransfer": {
+                  "transferMode": "Chunked"
+                }
+              }
+            }
+          },
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "c9221f73-8054-4746-95ba-375b3b89d1c0"
+          },
+          "type": "Foreach"
+        },
+        "Refresh_a_dataflow": {
+          "runAfter": {
+            "Apply_to_each": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "a0f5d7d5-7713-49ee-ac73-ef62c980f543"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_dataflows",
+              "operationId": "RefreshDataflow",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_dataflows"
+            },
+            "parameters": {
+              "workspaceType": "Environment",
+              "groupIdForRefreshDataflow": "019e5322-406e-e387-9469-25f7791b7140-31c688f59-europe",
+              "dataflowIdForRefreshDataflow": "39017c6c-d89a-4c66-9108-3427db4bb1fa"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Refresh_a_dataflow_2": {
+          "runAfter": {
+            "Apply_to_each": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "389844d8-a0a6-45c5-830e-8f74b4428387"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_dataflows",
+              "operationId": "RefreshDataflow",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_dataflows"
+            },
+            "parameters": {
+              "workspaceType": "Environment",
+              "groupIdForRefreshDataflow": "019e5322-406e-e387-9469-25f7791b7140-31c688f59-europe",
+              "dataflowIdForRefreshDataflow": "39017c6c-d89a-4c66-9108-3427db4bb1fa"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "When_a_dataflow_refresh_completes": {
+          "runAfter": {
+            "Refresh_a_dataflow_2": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "4c9cea76-b0f5-4f58-9853-feaf632ea2d2"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_dataflows",
+              "operationId": "OnRefreshComplete",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_dataflows"
+            },
+            "parameters": {
+              "workspaceType": "Environment",
+              "groupIdForOnRefreshComplete": "019e5322-406e-e387-9469-25f7791b7140-31c688f59-europe",
+              "dataflowIdForOnRefreshComplete": "39017c6c-d89a-4c66-9108-3427db4bb1fa"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "List_rows": {
+          "runAfter": {
+            "When_a_dataflow_refresh_completes": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "d8ebde90-23cc-4fbf-800b-2ee4252f907a"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "crdb9_taxidataprofiles"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Create_HTML_table": {
+          "runAfter": {
+            "Select": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "745c744d-ea3d-4a89-85b1-2c05957bdd29"
+          },
+          "type": "Table",
+          "inputs": {
+            "from": "@body('Select')",
+            "format": "HTML"
+          }
+        },
+        "Send_an_email_(V2)": {
+          "runAfter": {
+            "Create_HTML_table": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "89ed4d14-78ef-4803-969b-1071d763f9b3"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_office365",
+              "operationId": "SendEmailV2",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+            },
+            "parameters": {
+              "emailMessage/To": "Jean-eudes@aeonv.onmicrosoft.com;emmanuel.osafo@amalitech.com",
+              "emailMessage/Subject": "Data Quality",
+              "emailMessage/Body": "<p>Hi<br>\nCheck this out<br>\n<br>\n@{body('Create_HTML_table')}<br>\n<br>\nBest,<br>\nDataStuff</p>",
+              "emailMessage/Importance": "Normal"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Select": {
+          "runAfter": {
+            "List_rows": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "27472d92-0ea2-420e-b8b9-928a14f417e5"
+          },
+          "type": "Select",
+          "inputs": {
+            "from": "@outputs('List_rows')?['body/value']",
+            "select": {
+              "Null": "@item()?['crdb9_nullcount']",
+              "Status": "@item()?['statecode']"
+            }
+          }
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

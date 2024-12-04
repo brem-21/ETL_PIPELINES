@@ -1,0 +1,155 @@
+<ImportExportXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.24104.202" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.24104.00202">
+  <Entities></Entities>
+  <Roles></Roles>
+  <Workflows>
+    <Workflow WorkflowId="{41b69d8d-6bb1-ef11-b8e9-000d3a2c37ce}" Name="Get email">
+      <JsonFileName>/Workflows/Getemail-41B69D8D-6BB1-EF11-B8E9-000D3A2C37CE.json</JsonFileName>
+      <Type>1</Type>
+      <Subprocess>0</Subprocess>
+      <Category>5</Category>
+      <Mode>0</Mode>
+      <Scope>4</Scope>
+      <OnDemand>0</OnDemand>
+      <TriggerOnCreate>0</TriggerOnCreate>
+      <TriggerOnDelete>0</TriggerOnDelete>
+      <AsyncAutodelete>0</AsyncAutodelete>
+      <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+      <StateCode>1</StateCode>
+      <StatusCode>2</StatusCode>
+      <RunAs>1</RunAs>
+      <IsTransacted>1</IsTransacted>
+      <IntroducedVersion>1.0.0.0</IntroducedVersion>
+      <IsCustomizable>1</IsCustomizable>
+      <BusinessProcessType>0</BusinessProcessType>
+      <IsCustomProcessingStepAllowedForOtherPublishers>1</IsCustomProcessingStepAllowedForOtherPublishers>
+      <PrimaryEntity>none</PrimaryEntity>
+      <LocalizedNames>
+        <LocalizedName languagecode="1033" description="Get email" />
+      </LocalizedNames>
+    </Workflow>
+  </Workflows>
+  <FieldSecurityProfiles></FieldSecurityProfiles>
+  <Templates />
+  <EntityMaps />
+  <EntityRelationships />
+  <OrganizationSettings />
+  <optionsets />
+  <CustomControls />
+  <EntityDataProviders />
+  <CanvasApps>
+    <CanvasApp>
+      <Name>del_taxi_9c484</Name>
+      <AppVersion>2024-12-04T11:02:37Z</AppVersion>
+      <Status>Ready</Status>
+      <CreatedByClientVersion>3.24111.12.0</CreatedByClientVersion>
+      <MinClientVersion>3.24111.12.0</MinClientVersion>
+      <Tags>{"primaryDeviceWidth":"640","primaryDeviceHeight":"1136","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Phone","showStatusBar":"false","publisherVersion":"3.24111.12","minimumRequiredApiVersion":"2.2.0","hasComponent":"false","hasUnlockedComponent":"false","isUnifiedRootApp":"false","sienaVersion":"20241204T100640Z-3.24111.12.0"}</Tags>
+      <IsCdsUpgraded>0</IsCdsUpgraded>
+      <GalleryItemId xsi:nil="true"></GalleryItemId>
+      <BackgroundColor>RGBA(0,176,240,1)</BackgroundColor>
+      <DisplayName>Taxi</DisplayName>
+      <Description xsi:nil="true"></Description>
+      <CommitMessage xsi:nil="true"></CommitMessage>
+      <Publisher xsi:nil="true"></Publisher>
+      <AuthorizationReferences>[]</AuthorizationReferences>
+      <ConnectionReferences>{"2a6c4fe9-e092-4c02-a92c-310e793ddbbc":{"id":"/providers/microsoft.powerapps/apis/shared_microsoftspatialservices","displayName":"Spatial Services","iconUri":"https://connectoricons-prod.azureedge.net/u/laborbol/partial-builds/1711/1.0.1711.3876/microsoftspatialservices/icon.png","dataSources":["SpatialServices"],"dependencies":[],"dependents":[],"parameterHints":{},"parameterHintsV2":{},"isOnPremiseConnection":false,"bypassConsent":false,"dataSets":{},"apiTier":"Premium"}}</ConnectionReferences>
+      <DatabaseReferences>{"default.cds":{"databaseDetails":{"referenceType":"Environmental","environmentName":"default.cds","overrideValues":{"status":"NotSpecified","environmentVariableName":""}},"dataSources":{"TaxiDatas":{"entitySetName":"crdb9_taxidata_2s","logicalName":"crdb9_taxidata_2"}}}}</DatabaseReferences>
+      <AppComponents>[]</AppComponents>
+      <AppComponentDependencies>[]</AppComponentDependencies>
+      <CanConsumeAppPass>0</CanConsumeAppPass>
+      <CanvasAppType>0</CanvasAppType>
+      <BypassConsent>0</BypassConsent>
+      <AdminControlBypassConsent>0</AdminControlBypassConsent>
+      <EmbeddedApp xsi:nil="true"></EmbeddedApp>
+      <IntroducedVersion>1.0</IntroducedVersion>
+      <CdsDependencies>{"cdsdependencies":[{"logicalname":"crdb9_taxidata_2","componenttype":1}]}</CdsDependencies>
+      <IsCustomizable>1</IsCustomizable>
+      <BackgroundImageUri>/CanvasApps/del_taxi_9c484_BackgroundImageUri</BackgroundImageUri>
+      <DocumentUri>/CanvasApps/del_taxi_9c484_DocumentUri.msapp</DocumentUri>
+      <AdditionalUris>
+        <AdditionalUri>/CanvasApps/del_taxi_9c484_AdditionalUris0_identity.json</AdditionalUri>
+      </AdditionalUris>
+    </CanvasApp>
+  </CanvasApps>
+  <connectionreferences>
+    <connectionreference connectionreferencelogicalname="del_sharedoffice365_2c2c8">
+      <connectionreferencedisplayname>Office 365 Outlook DETAXIDEMO-2c2c8</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_office365</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="del_sharedonedriveforbusiness_6f8e4">
+      <connectionreferencedisplayname>OneDrive for Business DETAXIDEMO-6f8e4</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_onedriveforbusiness</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="new_sharedcommondataserviceforapps_b78b9">
+      <connectionreferencedisplayname>Microsoft Dataverse</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="new_shareddataflows_9dba8">
+      <connectionreferencedisplayname>Power Query Dataflows</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_dataflows</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+  </connectionreferences>
+  <msdyn_dataflows>
+    <msdyn_dataflow msdyn_dataflowid="7645dd9b-9bb1-ef11-b8e9-000d3a2c37ce">
+      <iscustomizable>1</iscustomizable>
+      <msdyn_internalversion>6e78f2e8-abb6-4eb5-9acf-221d1c85d6ce</msdyn_internalversion>
+      <msdyn_mashupdocument>section Section1;
+shared #"Yello TaxiData" = let
+  Source = Csv.Document(Web.Contents("https://amalitech-my.sharepoint.com/personal/brempong_dankwah_amalitech_com/Documents/DE%20PowerAutomate/Yello%20TaxiData.csv"), [Delimiter = ",", Columns = 20, QuoteStyle = QuoteStyle.None]),
+  #"Promoted headers" = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+  #"Changed column type" = Table.TransformColumnTypes(#"Promoted headers", {{"RateCodeID", Int64.Type}, {"RatecodeID", type text}, {"VendorID", Int64.Type}, {"dropoff_latitude", type number}, {"dropoff_longitude", type number}, {"extra", type number}, {"fare_amount", type number}, {"improvement_surcharge", type number}, {"mta_tax", type number}, {"passenger_count", Int64.Type}, {"payment_type", Int64.Type}, {"pickup_latitude", type number}, {"pickup_longitude", type number}, {"store_and_fwd_flag", type text}, {"tip_amount", type number}, {"tolls_amount", type number}, {"total_amount", type number}, {"tpep_dropoff_datetime", type datetime}, {"tpep_pickup_datetime", type datetime}, {"trip_distance", type number}}),
+  #"Removed columns" = Table.RemoveColumns(#"Changed column type", {"RatecodeID"}),
+  #"Changed column type 1" = Table.TransformColumnTypes(#"Removed columns", {{"dropoff_latitude", type text}, {"dropoff_longitude", type text}, {"pickup_latitude", type text}, {"pickup_longitude", type text}}),
+  #"Filtered rows" = Table.SelectRows(#"Changed column type 1", each [pickup_longitude] &lt;&gt; "0" and [dropoff_longitude] &lt;&gt; "-74.0025863647461"),
+  #"Filtered rows 1" = Table.SelectRows(#"Filtered rows", each [dropoff_latitude] &lt;&gt; "0" and [dropoff_longitude] &lt;&gt; "0"),
+  #"Added index" = Table.AddIndexColumn(#"Filtered rows 1", "Index", 0, 1, Int64.Type)
+in
+  #"Added index";
+</msdyn_mashupdocument>
+      <msdyn_mashupsettings>{"QueryGroups":[],"DocumentLocale":"en-GB","QueriesMetadata":{"Yello TaxiData":{"QueryId":"cd486927-c31e-47fa-a979-c6d26407803b","QueryName":"Yello TaxiData","QueryGroupId":null,"EntityName":"crdb9_TaxiData_2","LastKnownIsCalculatedEntity":false,"LastKnownIsLinkedEntity":false,"LastKnownIsParameter":false,"IsHidden":null,"LastKnownResultTypeName":"table","LoadEnabled":true,"DeleteExistingDataOnLoad":false,"FieldsMetadata":{"crdb9_dropoff_latitude":{"SourceColumnName":"dropoff_latitude","DestinationFieldType":"String","AutoNumberSettings":null},"crdb9_dropoff_longitude":{"SourceColumnName":"dropoff_longitude","DestinationFieldType":"String","AutoNumberSettings":null},"crdb9_extra":{"SourceColumnName":"extra","DestinationFieldType":"Double","AutoNumberSettings":null},"crdb9_fare_amount":{"SourceColumnName":"fare_amount","DestinationFieldType":"Double","AutoNumberSettings":null},"crdb9_improvement_surcharge":{"SourceColumnName":"improvement_surcharge","DestinationFieldType":"Double","AutoNumberSettings":null},"crdb9_Index":{"SourceColumnName":"Index","DestinationFieldType":"String","AutoNumberSettings":null},"crdb9_mta_tax":{"SourceColumnName":"mta_tax","DestinationFieldType":"Double","AutoNumberSettings":null},"crdb9_passenger_count":{"SourceColumnName":"passenger_count","DestinationFieldType":"Integer","AutoNumberSettings":null},"crdb9_payment_type":{"SourceColumnName":"payment_type","DestinationFieldType":"Integer","AutoNumberSettings":null},"crdb9_pickup_latitude":{"SourceColumnName":"pickup_latitude","DestinationFieldType":"String","AutoNumberSettings":null},"crdb9_pickup_longitude":{"SourceColumnName":"pickup_longitude","DestinationFieldType":"String","AutoNumberSettings":null},"crdb9_RateCodeID":{"SourceColumnName":"RateCodeID","DestinationFieldType":"Integer","AutoNumberSettings":null},"crdb9_store_and_fwd_flag":{"SourceColumnName":"store_and_fwd_flag","DestinationFieldType":"String","AutoNumberSettings":null},"crdb9_tip_amount":{"SourceColumnName":"tip_amount","DestinationFieldType":"Double","AutoNumberSettings":null},"crdb9_tolls_amount":{"SourceColumnName":"tolls_amount","DestinationFieldType":"Double","AutoNumberSettings":null},"crdb9_total_amount":{"SourceColumnName":"total_amount","DestinationFieldType":"Double","AutoNumberSettings":null},"crdb9_tpep_dropoff_datetime":{"SourceColumnName":"tpep_dropoff_datetime","DestinationFieldType":"DateAndTime","AutoNumberSettings":null},"crdb9_tpep_pickup_datetime":{"SourceColumnName":"tpep_pickup_datetime","DestinationFieldType":"DateAndTime","AutoNumberSettings":null},"crdb9_trip_distance":{"SourceColumnName":"trip_distance","DestinationFieldType":"Double","AutoNumberSettings":null},"crdb9_VendorID":{"SourceColumnName":"VendorID","DestinationFieldType":"Integer","AutoNumberSettings":null}},"HostProperties":{"NewEntityPrimaryNameField":"crdb9_Index","MappingEditorProperties":"{}"},"JsonOutputDestinations":null,"BindToDefaultOutputDestination":null,"JsonIncrementalRefreshSettings":null,"JsonStagingDefinition":null}},"FastCombine":false,"AllowNativeQueries":false,"HostContext":{"Type":"CdsT","Details":{"EnvironmentId":"019e5322-406e-e387-9469-25f7791b7140"}},"HostProperties":null,"SkipAutomaticTypeAndHeaderDetection":false,"DisableAutoAnonymousConnectionUpsert":false,"AllowedModules":null,"DataflowMetadata":"{\"DataflowType\":\"Cdst\",\"DataflowId\":\"39017c6c-d89a-4c66-9108-3427db4bb1fa\",\"OwnerUserId\":\"f0ce85df-f02e-4b72-a3fd-617a04f89a55\",\"OwnerName\":\"Unknown\",\"OwnerTenantId\":\"b20a8f4d-0d6a-4f2e-83a2-181c968f8882\",\"GatewayObjectId\":null,\"ModelSnapshotUri\":\"\",\"GroupId\":\"019e5322-406e-e387-9469-25f7791b7140\",\"DataflowState\":\"Source\",\"LastUpdateTime\":\"2024-12-03T17:33:03.6495757+00:00\",\"LastStateChangedTime\":\"2024-12-03T17:33:03.6495757+00:00\",\"CreatedTime\":\"2024-12-03T17:25:13.9619198+00:00\",\"ExpiresAfter\":\"2024-12-05T16:25:13.9605174+00:00\",\"AllowedModules\":null,\"UseHostConnectionProvider\":null,\"SkipAutomaticTypeAndHeaderDetection\":null,\"EditingSessionId\":null,\"HostInformation\":null,\"HostContext\":{\"Type\":\"CdsT\",\"Details\":{\"EnvironmentId\":\"019e5322-406e-e387-9469-25f7791b7140\"}},\"HostProperties\":{\"ServiceFeatureFlag_EnableNewCdstDataflowOrchestration\":\"true\"},\"DisableAutoAnonymousConnectionUpsert\":null,\"RelatedDataflowId\":\"116e1847-9dfa-4cdb-929d-f3b830470d3f\",\"NotificationSettings\":{\"RefreshEmailSettings\":{\"SendMailEnabled\":false,\"EmailsList\":[]},\"DataflowWebhooks\":{}},\"DataflowPublishMetadata\":{\"PublishStatus\":\"Published\",\"ErrorInfo\":null,\"PublishVersion\":\"2024-12-03T17:32:09.6097882+00:00\",\"LastUpdateTime\":\"2024-12-03T17:33:03.6524713+00:00\",\"LastPublishedTime\":\"2024-12-03T17:33:03.6524713+00:00\",\"SessionId\":null,\"RequestId\":null},\"TrustedConnections\":null,\"ConnectionOverrides\":[{\"Path\":\"https://amalitech-my.sharepoint.com\",\"Kind\":\"Web\",\"Provider\":\"PowerApps\",\"EnvironmentName\":\"019e5322-406e-e387-9469-25f7791b7140\",\"ApiName\":\"webcontents\",\"ConnectionName\":\"e8d9983c974c43da9f9f5ddbd990b450\",\"CredentialDetails\":{},\"ConnectionParameters\":{},\"PrivacyGroup\":\"None\"}]}","Dataflow":"{\"name\":\"DE lecture Flow\",\"ppdf:dataflowId\":\"39017c6c-d89a-4c66-9108-3427db4bb1fa\",\"ppdf:owner\":{\"tenantId\":\"b20a8f4d-0d6a-4f2e-83a2-181c968f8882\",\"userId\":\"f0ce85df-f02e-4b72-a3fd-617a04f89a55\"},\"ppdf:fastCopy\":false,\"version\":\"15\",\"culture\":\"en-GB\",\"ppdf:outputFileFormat\":\"Csv\",\"pbi:mashup\":{\"fastCombine\":false,\"allowNativeQueries\":false,\"queriesMetadata\":{\"Yello TaxiData\":{\"queryId\":\"cd486927-c31e-47fa-a979-c6d26407803b\",\"queryName\":\"Yello TaxiData\",\"entityName\":\"crdb9_TaxiData_2\",\"loadEnabled\":true,\"lastKnownResultTypeName\":\"table\",\"lastKnownIsCalculatedEntity\":false,\"lastKnownIsLinkedEntity\":false,\"lastKnownIsParameter\":false,\"deleteExistingDataOnLoad\":false,\"hostProperties\":{\"NewEntityPrimaryNameField\":\"crdb9_Index\",\"MappingEditorProperties\":\"{}\"},\"fieldsMetadata\":{\"crdb9_dropoff_latitude\":{\"sourceColumnName\":\"dropoff_latitude\",\"destinationFieldType\":\"String\"},\"crdb9_dropoff_longitude\":{\"sourceColumnName\":\"dropoff_longitude\",\"destinationFieldType\":\"String\"},\"crdb9_extra\":{\"sourceColumnName\":\"extra\",\"destinationFieldType\":\"Double\"},\"crdb9_fare_amount\":{\"sourceColumnName\":\"fare_amount\",\"destinationFieldType\":\"Double\"},\"crdb9_improvement_surcharge\":{\"sourceColumnName\":\"improvement_surcharge\",\"destinationFieldType\":\"Double\"},\"crdb9_Index\":{\"sourceColumnName\":\"Index\",\"destinationFieldType\":\"String\"},\"crdb9_mta_tax\":{\"sourceColumnName\":\"mta_tax\",\"destinationFieldType\":\"Double\"},\"crdb9_passenger_count\":{\"sourceColumnName\":\"passenger_count\",\"destinationFieldType\":\"Integer\"},\"crdb9_payment_type\":{\"sourceColumnName\":\"payment_type\",\"destinationFieldType\":\"Integer\"},\"crdb9_pickup_latitude\":{\"sourceColumnName\":\"pickup_latitude\",\"destinationFieldType\":\"String\"},\"crdb9_pickup_longitude\":{\"sourceColumnName\":\"pickup_longitude\",\"destinationFieldType\":\"String\"},\"crdb9_RateCodeID\":{\"sourceColumnName\":\"RateCodeID\",\"destinationFieldType\":\"Integer\"},\"crdb9_store_and_fwd_flag\":{\"sourceColumnName\":\"store_and_fwd_flag\",\"destinationFieldType\":\"String\"},\"crdb9_tip_amount\":{\"sourceColumnName\":\"tip_amount\",\"destinationFieldType\":\"Double\"},\"crdb9_tolls_amount\":{\"sourceColumnName\":\"tolls_amount\",\"destinationFieldType\":\"Double\"},\"crdb9_total_amount\":{\"sourceColumnName\":\"total_amount\",\"destinationFieldType\":\"Double\"},\"crdb9_tpep_dropoff_datetime\":{\"sourceColumnName\":\"tpep_dropoff_datetime\",\"destinationFieldType\":\"DateAndTime\"},\"crdb9_tpep_pickup_datetime\":{\"sourceColumnName\":\"tpep_pickup_datetime\",\"destinationFieldType\":\"DateAndTime\"},\"crdb9_trip_distance\":{\"sourceColumnName\":\"trip_distance\",\"destinationFieldType\":\"Double\"},\"crdb9_VendorID\":{\"sourceColumnName\":\"VendorID\",\"destinationFieldType\":\"Integer\"}}}},\"document\":\"section Section1;\\r\\nshared #\\\"Yello TaxiData\\\" = let\\r\\n  Source = Csv.Document(Web.Contents(\\\"https://amalitech-my.sharepoint.com/personal/brempong_dankwah_amalitech_com/Documents/DE%20PowerAutomate/Yello%20TaxiData.csv\\\"), [Delimiter = \\\",\\\", Columns = 20, QuoteStyle = QuoteStyle.None]),\\r\\n  #\\\"Promoted headers\\\" = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),\\r\\n  #\\\"Changed column type\\\" = Table.TransformColumnTypes(#\\\"Promoted headers\\\", {{\\\"RateCodeID\\\", Int64.Type}, {\\\"RatecodeID\\\", type text}, {\\\"VendorID\\\", Int64.Type}, {\\\"dropoff_latitude\\\", type number}, {\\\"dropoff_longitude\\\", type number}, {\\\"extra\\\", type number}, {\\\"fare_amount\\\", type number}, {\\\"improvement_surcharge\\\", type number}, {\\\"mta_tax\\\", type number}, {\\\"passenger_count\\\", Int64.Type}, {\\\"payment_type\\\", Int64.Type}, {\\\"pickup_latitude\\\", type number}, {\\\"pickup_longitude\\\", type number}, {\\\"store_and_fwd_flag\\\", type text}, {\\\"tip_amount\\\", type number}, {\\\"tolls_amount\\\", type number}, {\\\"total_amount\\\", type number}, {\\\"tpep_dropoff_datetime\\\", type datetime}, {\\\"tpep_pickup_datetime\\\", type datetime}, {\\\"trip_distance\\\", type number}}),\\r\\n  #\\\"Removed columns\\\" = Table.RemoveColumns(#\\\"Changed column type\\\", {\\\"RatecodeID\\\"}),\\r\\n  #\\\"Changed column type 1\\\" = Table.TransformColumnTypes(#\\\"Removed columns\\\", {{\\\"dropoff_latitude\\\", type text}, {\\\"dropoff_longitude\\\", type text}, {\\\"pickup_latitude\\\", type text}, {\\\"pickup_longitude\\\", type text}}),\\r\\n  #\\\"Filtered rows\\\" = Table.SelectRows(#\\\"Changed column type 1\\\", each [pickup_longitude] &lt;&gt; \\\"0\\\" and [dropoff_longitude] &lt;&gt; \\\"-74.0025863647461\\\"),\\r\\n  #\\\"Filtered rows 1\\\" = Table.SelectRows(#\\\"Filtered rows\\\", each [dropoff_latitude] &lt;&gt; \\\"0\\\" and [dropoff_longitude] &lt;&gt; \\\"0\\\"),\\r\\n  #\\\"Added index\\\" = Table.AddIndexColumn(#\\\"Filtered rows 1\\\", \\\"Index\\\", 0, 1, Int64.Type)\\r\\nin\\r\\n  #\\\"Added index\\\";\\r\\n\"},\"annotations\":[{\"name\":\"pbi:QueryGroups\",\"value\":\"[]\"}]}"}</msdyn_mashupsettings>
+      <msdyn_name>DE lecture Flow</msdyn_name>
+      <msdyn_originaldataflowid>39017c6c-d89a-4c66-9108-3427db4bb1fa</msdyn_originaldataflowid>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </msdyn_dataflow>
+    <msdyn_dataflow msdyn_dataflowid="b9612169-97b1-ef11-b8e9-000d3a2c37ce">
+      <iscustomizable>1</iscustomizable>
+      <msdyn_internalversion>30eaaa08-6ab0-423a-b84d-7d7fd412ca32</msdyn_internalversion>
+      <msdyn_mashupdocument>section Section1;
+shared #"Yello TaxiData" = let
+  Source = Csv.Document(Web.Contents("https://amalitech-my.sharepoint.com/personal/brempong_dankwah_amalitech_com/Documents/DE%20PowerAutomate/Yello%20TaxiData.csv"), [Delimiter = ",", Columns = 20, QuoteStyle = QuoteStyle.None]),
+  #"Promoted headers" = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+  #"Changed column type" = Table.TransformColumnTypes(#"Promoted headers", {{"RateCodeID", Int64.Type}, {"RatecodeID", type text}, {"VendorID", Int64.Type}, {"dropoff_latitude", type number}, {"dropoff_longitude", type number}, {"extra", type number}, {"fare_amount", type number}, {"improvement_surcharge", type number}, {"mta_tax", type number}, {"passenger_count", Int64.Type}, {"payment_type", Int64.Type}, {"pickup_latitude", type number}, {"pickup_longitude", type number}, {"store_and_fwd_flag", type text}, {"tip_amount", type number}, {"tolls_amount", type number}, {"total_amount", type number}, {"tpep_dropoff_datetime", type datetime}, {"tpep_pickup_datetime", type datetime}, {"trip_distance", type number}}),
+  #"Removed columns" = Table.RemoveColumns(#"Changed column type", {"RatecodeID"}),
+  #"Filtered rows" = Table.SelectRows(#"Removed columns", each [dropoff_latitude] &lt;&gt; 0 and [dropoff_longitude] &lt;&gt; 0),
+  #"Changed column type 1" = Table.TransformColumnTypes(#"Filtered rows", {{"dropoff_latitude", type text}, {"dropoff_longitude", type text}})
+in
+  #"Changed column type 1";
+</msdyn_mashupdocument>
+      <msdyn_mashupsettings>{"QueryGroups":[],"DocumentLocale":"en-GB","QueriesMetadata":{"Yello TaxiData":{"QueryId":"7b004fe7-1954-4556-9e6e-5d033a379d70","QueryName":"Yello TaxiData","QueryGroupId":null,"EntityName":"crdb9_TaxiData","LastKnownIsCalculatedEntity":false,"LastKnownIsLinkedEntity":false,"LastKnownIsParameter":false,"IsHidden":null,"LastKnownResultTypeName":"table","LoadEnabled":true,"DeleteExistingDataOnLoad":false,"FieldsMetadata":{"crdb9_dropoff_latitude":{"SourceColumnName":"dropoff_latitude","DestinationFieldType":"String","AutoNumberSettings":null},"crdb9_dropoff_longitude":{"SourceColumnName":"dropoff_longitude","DestinationFieldType":"String","AutoNumberSettings":null},"crdb9_extra":{"SourceColumnName":"extra","DestinationFieldType":"Double","AutoNumberSettings":null},"crdb9_fare_amount":{"SourceColumnName":"fare_amount","DestinationFieldType":"Double","AutoNumberSettings":null},"crdb9_improvement_surcharge":{"SourceColumnName":"improvement_surcharge","DestinationFieldType":"Double","AutoNumberSettings":null},"crdb9_mta_tax":{"SourceColumnName":"mta_tax","DestinationFieldType":"Double","AutoNumberSettings":null},"crdb9_passenger_count":{"SourceColumnName":"passenger_count","DestinationFieldType":"Integer","AutoNumberSettings":null},"crdb9_payment_type":{"SourceColumnName":"payment_type","DestinationFieldType":"Integer","AutoNumberSettings":null},"crdb9_pickup_latitude":{"SourceColumnName":"pickup_latitude","DestinationFieldType":"Double","AutoNumberSettings":null},"crdb9_pickup_longitude":{"SourceColumnName":"pickup_longitude","DestinationFieldType":"Double","AutoNumberSettings":null},"crdb9_RateCodeID":{"SourceColumnName":"RateCodeID","DestinationFieldType":"Integer","AutoNumberSettings":null},"crdb9_store_and_fwd_flag":{"SourceColumnName":"store_and_fwd_flag","DestinationFieldType":"String","AutoNumberSettings":null},"crdb9_tip_amount":{"SourceColumnName":"tip_amount","DestinationFieldType":"Double","AutoNumberSettings":null},"crdb9_tolls_amount":{"SourceColumnName":"tolls_amount","DestinationFieldType":"Double","AutoNumberSettings":null},"crdb9_total_amount":{"SourceColumnName":"total_amount","DestinationFieldType":"Double","AutoNumberSettings":null},"crdb9_tpep_dropoff_datetime":{"SourceColumnName":"tpep_dropoff_datetime","DestinationFieldType":"DateAndTime","AutoNumberSettings":null},"crdb9_tpep_pickup_datetime":{"SourceColumnName":"tpep_pickup_datetime","DestinationFieldType":"DateAndTime","AutoNumberSettings":null},"crdb9_trip_distance":{"SourceColumnName":"trip_distance","DestinationFieldType":"Double","AutoNumberSettings":null},"crdb9_VendorID":{"SourceColumnName":"VendorID","DestinationFieldType":"Integer","AutoNumberSettings":null},"crdb9_Name":{"SourceColumnName":null,"DestinationFieldType":"String","AutoNumberSettings":{"AutoNumberFormat":"{SEQNUM:4}","DisplayName":"Name","SeedValue":1000}}},"HostProperties":{"NewEntityPrimaryNameField":"crdb9_Name","MappingEditorProperties":"{}"},"JsonOutputDestinations":null,"BindToDefaultOutputDestination":null,"JsonIncrementalRefreshSettings":null,"JsonStagingDefinition":null}},"FastCombine":false,"AllowNativeQueries":false,"HostContext":{"Type":"CdsT","Details":{"EnvironmentId":"019e5322-406e-e387-9469-25f7791b7140"}},"HostProperties":null,"SkipAutomaticTypeAndHeaderDetection":false,"DisableAutoAnonymousConnectionUpsert":false,"AllowedModules":null,"DataflowMetadata":"{\"DataflowType\":\"Cdst\",\"DataflowId\":\"b1d4cc1e-028f-4b00-ae8f-eddfef32a299\",\"OwnerUserId\":\"f0ce85df-f02e-4b72-a3fd-617a04f89a55\",\"OwnerName\":\"Unknown\",\"OwnerTenantId\":\"b20a8f4d-0d6a-4f2e-83a2-181c968f8882\",\"GatewayObjectId\":null,\"ModelSnapshotUri\":\"\",\"GroupId\":\"019e5322-406e-e387-9469-25f7791b7140\",\"DataflowState\":\"Source\",\"LastUpdateTime\":\"2024-12-03T17:00:16.6954098+00:00\",\"LastStateChangedTime\":\"2024-12-03T17:00:16.6954098+00:00\",\"CreatedTime\":\"2024-12-03T16:52:02.6549861+00:00\",\"ExpiresAfter\":\"2024-12-05T15:52:02.6524727+00:00\",\"AllowedModules\":null,\"UseHostConnectionProvider\":null,\"SkipAutomaticTypeAndHeaderDetection\":null,\"EditingSessionId\":null,\"HostInformation\":null,\"HostContext\":{\"Type\":\"CdsT\",\"Details\":{\"EnvironmentId\":\"019e5322-406e-e387-9469-25f7791b7140\"}},\"HostProperties\":{\"ServiceFeatureFlag_EnableNewCdstDataflowOrchestration\":\"true\"},\"DisableAutoAnonymousConnectionUpsert\":null,\"RelatedDataflowId\":\"f4fa6fa8-e193-4023-8d60-694a03360392\",\"DataflowPublishMetadata\":{\"PublishStatus\":\"Published\",\"ErrorInfo\":null,\"PublishVersion\":\"2024-12-03T16:58:58.7214445+00:00\",\"LastUpdateTime\":\"2024-12-03T17:00:16.6917094+00:00\",\"LastPublishedTime\":\"2024-12-03T17:00:16.6917094+00:00\",\"SessionId\":null,\"RequestId\":null},\"TrustedConnections\":null,\"ConnectionOverrides\":[{\"Path\":\"https://amalitech-my.sharepoint.com/personal/brempong_dankwah_amalitech_com/\",\"Kind\":\"Web\",\"Provider\":\"PowerApps\",\"EnvironmentName\":\"019e5322-406e-e387-9469-25f7791b7140\",\"ApiName\":\"webcontents\",\"ConnectionName\":\"e8d9983c974c43da9f9f5ddbd990b450\",\"CredentialDetails\":{},\"ConnectionParameters\":{}}]}","Dataflow":"{\"name\":\"DE FLOW\",\"ppdf:dataflowId\":\"b1d4cc1e-028f-4b00-ae8f-eddfef32a299\",\"ppdf:owner\":{\"tenantId\":\"b20a8f4d-0d6a-4f2e-83a2-181c968f8882\",\"userId\":\"f0ce85df-f02e-4b72-a3fd-617a04f89a55\"},\"ppdf:fastCopy\":false,\"version\":\"8\",\"culture\":\"en-GB\",\"ppdf:outputFileFormat\":\"Csv\",\"pbi:mashup\":{\"fastCombine\":false,\"allowNativeQueries\":false,\"queriesMetadata\":{\"Yello TaxiData\":{\"queryId\":\"7b004fe7-1954-4556-9e6e-5d033a379d70\",\"queryName\":\"Yello TaxiData\",\"entityName\":\"crdb9_TaxiData\",\"loadEnabled\":true,\"lastKnownResultTypeName\":\"table\",\"lastKnownIsCalculatedEntity\":false,\"lastKnownIsLinkedEntity\":false,\"lastKnownIsParameter\":false,\"deleteExistingDataOnLoad\":false,\"hostProperties\":{\"NewEntityPrimaryNameField\":\"crdb9_Name\",\"MappingEditorProperties\":\"{}\"},\"fieldsMetadata\":{\"crdb9_dropoff_latitude\":{\"sourceColumnName\":\"dropoff_latitude\",\"destinationFieldType\":\"String\"},\"crdb9_dropoff_longitude\":{\"sourceColumnName\":\"dropoff_longitude\",\"destinationFieldType\":\"String\"},\"crdb9_extra\":{\"sourceColumnName\":\"extra\",\"destinationFieldType\":\"Double\"},\"crdb9_fare_amount\":{\"sourceColumnName\":\"fare_amount\",\"destinationFieldType\":\"Double\"},\"crdb9_improvement_surcharge\":{\"sourceColumnName\":\"improvement_surcharge\",\"destinationFieldType\":\"Double\"},\"crdb9_mta_tax\":{\"sourceColumnName\":\"mta_tax\",\"destinationFieldType\":\"Double\"},\"crdb9_passenger_count\":{\"sourceColumnName\":\"passenger_count\",\"destinationFieldType\":\"Integer\"},\"crdb9_payment_type\":{\"sourceColumnName\":\"payment_type\",\"destinationFieldType\":\"Integer\"},\"crdb9_pickup_latitude\":{\"sourceColumnName\":\"pickup_latitude\",\"destinationFieldType\":\"Double\"},\"crdb9_pickup_longitude\":{\"sourceColumnName\":\"pickup_longitude\",\"destinationFieldType\":\"Double\"},\"crdb9_RateCodeID\":{\"sourceColumnName\":\"RateCodeID\",\"destinationFieldType\":\"Integer\"},\"crdb9_store_and_fwd_flag\":{\"sourceColumnName\":\"store_and_fwd_flag\",\"destinationFieldType\":\"String\"},\"crdb9_tip_amount\":{\"sourceColumnName\":\"tip_amount\",\"destinationFieldType\":\"Double\"},\"crdb9_tolls_amount\":{\"sourceColumnName\":\"tolls_amount\",\"destinationFieldType\":\"Double\"},\"crdb9_total_amount\":{\"sourceColumnName\":\"total_amount\",\"destinationFieldType\":\"Double\"},\"crdb9_tpep_dropoff_datetime\":{\"sourceColumnName\":\"tpep_dropoff_datetime\",\"destinationFieldType\":\"DateAndTime\"},\"crdb9_tpep_pickup_datetime\":{\"sourceColumnName\":\"tpep_pickup_datetime\",\"destinationFieldType\":\"DateAndTime\"},\"crdb9_trip_distance\":{\"sourceColumnName\":\"trip_distance\",\"destinationFieldType\":\"Double\"},\"crdb9_VendorID\":{\"sourceColumnName\":\"VendorID\",\"destinationFieldType\":\"Integer\"},\"crdb9_Name\":{\"destinationFieldType\":\"String\",\"autoNumberSettings\":{\"autoNumberFormat\":\"{SEQNUM:4}\",\"displayName\":\"Name\",\"seedValue\":1000}}}}},\"document\":\"section Section1;\\r\\nshared #\\\"Yello TaxiData\\\" = let\\r\\n  Source = Csv.Document(Web.Contents(\\\"https://amalitech-my.sharepoint.com/personal/brempong_dankwah_amalitech_com/Documents/DE%20PowerAutomate/Yello%20TaxiData.csv\\\"), [Delimiter = \\\",\\\", Columns = 20, QuoteStyle = QuoteStyle.None]),\\r\\n  #\\\"Promoted headers\\\" = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),\\r\\n  #\\\"Changed column type\\\" = Table.TransformColumnTypes(#\\\"Promoted headers\\\", {{\\\"RateCodeID\\\", Int64.Type}, {\\\"RatecodeID\\\", type text}, {\\\"VendorID\\\", Int64.Type}, {\\\"dropoff_latitude\\\", type number}, {\\\"dropoff_longitude\\\", type number}, {\\\"extra\\\", type number}, {\\\"fare_amount\\\", type number}, {\\\"improvement_surcharge\\\", type number}, {\\\"mta_tax\\\", type number}, {\\\"passenger_count\\\", Int64.Type}, {\\\"payment_type\\\", Int64.Type}, {\\\"pickup_latitude\\\", type number}, {\\\"pickup_longitude\\\", type number}, {\\\"store_and_fwd_flag\\\", type text}, {\\\"tip_amount\\\", type number}, {\\\"tolls_amount\\\", type number}, {\\\"total_amount\\\", type number}, {\\\"tpep_dropoff_datetime\\\", type datetime}, {\\\"tpep_pickup_datetime\\\", type datetime}, {\\\"trip_distance\\\", type number}}),\\r\\n  #\\\"Removed columns\\\" = Table.RemoveColumns(#\\\"Changed column type\\\", {\\\"RatecodeID\\\"}),\\r\\n  #\\\"Filtered rows\\\" = Table.SelectRows(#\\\"Removed columns\\\", each [dropoff_latitude] &lt;&gt; 0 and [dropoff_longitude] &lt;&gt; 0),\\r\\n  #\\\"Changed column type 1\\\" = Table.TransformColumnTypes(#\\\"Filtered rows\\\", {{\\\"dropoff_latitude\\\", type text}, {\\\"dropoff_longitude\\\", type text}})\\r\\nin\\r\\n  #\\\"Changed column type 1\\\";\\r\\n\"},\"annotations\":[{\"name\":\"pbi:QueryGroups\",\"value\":\"[]\"}]}"}</msdyn_mashupsettings>
+      <msdyn_name>DE FLOW</msdyn_name>
+      <msdyn_originaldataflowid>b1d4cc1e-028f-4b00-ae8f-eddfef32a299</msdyn_originaldataflowid>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </msdyn_dataflow>
+  </msdyn_dataflows>
+  <Languages>
+    <Language>1033</Language>
+  </Languages>
+</ImportExportXml>

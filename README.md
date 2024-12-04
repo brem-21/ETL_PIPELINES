@@ -105,7 +105,6 @@ A visual representation of the architecture implemented in this project.
   ![transformation](<powerapps/image copy 2.png>)
 
 **Data Profiling** 
- ![alt text](<powerapps/image copy 4.png>)
 
  ![alt text](<powerapps/image copy 5.png>)
 
