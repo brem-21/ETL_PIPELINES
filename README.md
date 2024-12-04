@@ -76,7 +76,36 @@ A visual representation of the architecture implemented in this project.
 - **ETL Workflow**: Managed by Airflow.
 - **Database**: PostgreSQL for storing transformed weather data.
 
-**Example Diagram:**
 ![DAG Overview](<Images/archit.png>)
 
+# POWER APPS
+- Creating a solution `DE Taxi Demo` within an environment.
 
+ ![solution](powerapps/image.png)
+
+### Power Automate flow within the DE Taxi Demo solution.
+ **Email Processing:**
+ - **Trigger** the flow when an email is received.
+ - An email that has **YellowTaxi** in the Body or Subject.
+ - Download the attachment and save it to a folder in OneDrive named DE PowerAutomate.
+
+![flow](<powerapps/image copy.png>)
+
+
+ **Data Transformation and Load** 
+- Load the data from the saved OneDrive file into Power Query.
+- Perform the following transformations:
+  - Remove unnecessary columns.
+  - Filter out rows where the drop-off coordinate is 0.
+  - Parse coordinates as text to ensure compatibility with Dataverse
+
+  ![transformation](<powerapps/image copy 2.png>)
+
+  ![transformation](<powerapps/image copy 2.png>)
+
+
+#### Images of the Power Apps.
+
+![app images](<powerapps/Screenshot 2024-12-03 193233.png>)
+
+![app images](<powerapps/Screenshot 2024-12-03 193357.png>)
