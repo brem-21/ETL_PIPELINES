@@ -106,6 +106,6 @@ A visual representation of the architecture implemented in this project.
 
 #### Images of the Power Apps.
 
-![app images](<powerapps/Screenshot 2024-12-03 193233.png>)
+![app images](<powerapps/image copy 4.png>)
 
-![app images](<powerapps/Screenshot 2024-12-03 193357.png>)
+![app images](<powerapps/image copy 6.png>)
