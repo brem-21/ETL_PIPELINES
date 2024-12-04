@@ -105,6 +105,6 @@ A visual representation of the architecture implemented in this project.
 
 
 #### Images of the Power Apps.
-![front_view](<powerapps/frontview.png>)
+- ![front_view](<powerapps/frontview.png>)
 
-![detailed_page](<powerapps/dteailed_page.png>)
+- ![detailed_page](<powerapps/dteailed_page.png>)
